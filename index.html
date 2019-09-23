@@ -10,14 +10,13 @@
 		<meta name="keywords" content="HTML" />
 
 		<style>
-			body{font-family:Arial, Helvetica, sans-serif};
+			body{font-family:Arial};
+
 			.tab
 			{
-				
-				min-width: 380px;
+				overflow: hidden;
 				border: 1px solid #00ff00;
 				background-color: #666666;
-				padding: 14px 16px;
 			}
 
 			.tab button
@@ -51,12 +50,10 @@
 		</style>
 	</head>
 	<body>
-		<div class="tab">
+		<div class="tab"  style="overflow: hidden">
 			<button class="tablinks" onclick="openTab(event, 'class1')">Class 1</button>
 			<button class="tablinks" onclick="openTab(event, 'class2')">Class 2</button>
 		</div>
-
-		<br><br>
 
 		<div id="class1" class="tabcontent">
 			<div>
