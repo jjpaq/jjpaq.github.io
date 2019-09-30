@@ -47,6 +47,7 @@ div.centre *
 div.border
 {
     border:1px #666 solid;
+    padding: 6px 12px;
 }
 
 p.highlight:hover
