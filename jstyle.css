@@ -33,16 +33,6 @@
     border-top: none;
 }
 
-#class3
-{
-    background-color: green;
-}
-
-#class3 p
-{
-    /*background-color: cyan;*/
-}
-
 div.centre
 {
     text-align: center;
@@ -54,7 +44,12 @@ div.centre *
     display: inline-block;
 }
 
-p.highlight:active
+div.border
+{
+    border:1px #666 solid;
+}
+
+p.highlight:hover
 {
     background-color:yellow;
 }
