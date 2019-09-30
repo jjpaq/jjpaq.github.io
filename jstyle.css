@@ -45,11 +45,11 @@
 
 div.centre
 {
-    display:inline-block;
-    width:100%;
+    text-align: center;
 }
 
-div .centre
+div.centre *
 {
-    text-align:center;
+    width: 500px;
+    display: inline-block;
 }
