@@ -40,7 +40,7 @@
 
 #class3 p
 {
-    background-color: cyan;
+    /*background-color: cyan;*/
 }
 
 div.centre
@@ -50,6 +50,11 @@ div.centre
 
 div.centre *
 {
-    width: 500px;
+    /*width: 500px;*/
     display: inline-block;
+}
+
+p.highlight:active
+{
+    background-color:yellow;
 }
