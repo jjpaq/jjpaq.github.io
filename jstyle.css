@@ -43,8 +43,13 @@
     background-color: cyan;
 }
 
-.centre
+div.centre
 {
-    display:block;
+    display:inline-block;
     width:100%;
+}
+
+div .centre
+{
+    text-align:center;
 }
