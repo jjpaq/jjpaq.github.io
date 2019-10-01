@@ -2,7 +2,10 @@
 {
     overflow: hidden;
     border: 1px solid #cccccc;
-    background-color: #f1f1f1			}
+    background-color: #f1f1f1;
+    position:sticky;
+    top:0;			
+}
 
 .tab button
 {
@@ -44,13 +47,46 @@ div.centre *
     display: inline-block;
 }
 
-div.border
+div.frame
 {
     border:1px #666 solid;
     padding: 6px 12px;
+    overflow:hidden;
 }
 
 p.highlight:hover
 {
     background-color:yellow;
+}
+
+.article-image
+{
+    display:block;
+    margin: 0 auto;
+    width:200px;
+    padding: 6px 12px;
+}
+
+p.article-content
+{
+    /*width:600px;*/
+}
+
+
+div.summary
+{
+    border:1px #666 solid;
+    float:right;
+    width:300px;
+    padding: 6px 12px;
+    margin-right:50px;
+    margin-left:50px;
+}
+
+img.fly
+{
+    position:fixed;
+    bottom:200px;
+    left:300px;
+    width: 50px;
 }
