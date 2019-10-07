@@ -7,6 +7,7 @@ $command = escapeshellcmd('python3 class4.py');
 $output = shell_exec($command);
 echo $output;
 
-echo $_POST["name"];
+if ($_POST["name"])
+    echo "<p style=\"text-align:center\">Hello ",$_POST["name"],"</p>";
 
 ?>

@@ -104,10 +104,21 @@
 			<div class="frame">
 				<h5>Playing around</h5>
 			</div>
-			<div style="overflow:visible;padding:0px;" class="np frame">
-				<form class="float_left" action="https://jeremypaquette.com/php.php" method="POST" onsubmit="submitForm()" target="jpaquette_iframe">
-					Name: <input type="text" name="name">
+			<div style="overflow:hidden;" class="frame">
+				<form id="c4_name_form" action="https://jeremypaquette.com/php.php" method="POST" onsubmit="submitForm()" target="jpaquette_iframe">
+					Name: <input type="text" name="name"><br><br>
+					<div class="centre">
+						<button style="margin:auto;" onclick="submitForm()">Submit!</button>
+					</div>
 				</form>
+				<div id="c4_form_preview">
+					<p id="c4_form_preview_title">Test</p>
+					<br>
+					<p id="c4_form_preview_name"></p>
+					<br>
+					<p id="c4_form_preview_email"></p>
+					<br>
+				</div>
 				<iframe name="jpaquette_iframe" id="form_response_frame" class="nb" src="https://jeremypaquette.com/php.php">Your browser does not support iframes.</iframe>
 			</div>
 			
