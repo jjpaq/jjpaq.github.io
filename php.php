@@ -7,4 +7,6 @@ $command = escapeshellcmd('python3 class4.py');
 $output = shell_exec($command);
 echo $output;
 
+echo $_POST["name"];
+
 ?>
