@@ -90,3 +90,13 @@ img.fly
     left:300px;
     width: 50px;
 }
+
+.nb
+{
+    border:none;
+}
+
+.np
+{
+    padding:none;
+}
