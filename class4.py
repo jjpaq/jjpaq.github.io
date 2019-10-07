@@ -1,0 +1,1 @@
+print("The answer is " + str(round(1.6*int(input("Enter a distance in miles: ")))) + "km")
