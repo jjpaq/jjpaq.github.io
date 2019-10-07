@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
 <?php
-echo "Third Test";
+echo "<p style='position:sticky;left:0;'>Third Test</p>";
 
 ?>
