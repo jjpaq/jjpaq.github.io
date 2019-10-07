@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
 <?php
-echo "Hello World!";
+echo "Third Test";
 
 ?>
