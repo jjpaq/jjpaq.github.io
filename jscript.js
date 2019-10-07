@@ -20,3 +20,8 @@ function openTab(evt,tabName)
     evt.currentTarget.className += " active";
 
 }
+
+function submitForm()
+{
+    alert("Thanks for submitting the form!")
+}
