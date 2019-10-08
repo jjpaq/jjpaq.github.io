@@ -8,6 +8,6 @@ $output = shell_exec($command);
 echo $output;
 
 if ($_POST["name"])
-    echo "<p style=\"text-align:center\">Hello ",$_POST["name"],"</p>";
+    echo "<p style=\"text-align:center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:red;\">",Hi ",$_POST["name"],"</p>";
 
 ?>

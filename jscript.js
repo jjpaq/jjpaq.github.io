@@ -23,5 +23,10 @@ function openTab(evt,tabName)
 
 function submitForm()
 {
-    alert("Thanks for submitting the form!")
+    var enteredName = document.getElementById("c4_form_input_name").value;
+    //alert("name: "+var);
+    document.getElementById("c4_form_preview_title").textContent = "Form Submission";
+    document.getElementById("c4_form_preview_title").style = "border:1px solid black;";
+    document.getElementById("c4_form_preview_name").textContent = enteredName;
+    document.getElementById("c4_form_preview_email").textContent = enteredName.toLowerCase() + "@gmail.com";
 }
