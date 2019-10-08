@@ -116,10 +116,10 @@ p.highlight:hover
     padding: 6px 12px;
 }
 
-p.article-content
+/*p.article-content
 {
-    /*width:600px;*/
-}
+    width:600px;
+}*/
 
 
 div.summary

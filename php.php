@@ -1,13 +1,17 @@
 <!DOCTYPE HTML>
+<head>
+    <link rel="stylesheet" type="text/css" href="jstyle.css">
+</head>
+<body>
+    <p id="c4_form_preview_name">
+        <?php echo $_POST["name"] ?>
 
-<?php
-//echo "<p style='margin:auto;width:500px;background-color:lightgrey;border:1px solid black;text-align:center;'>Third Test</p>";
+    </p>
 
-$command = escapeshellcmd('python3 class4.py');
-$output = shell_exec($command);
-echo $output;
+</body>
 
-if ($_POST["name"])
-    echo "<p style=\"text-align:center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:red;\">",Hi ",$_POST["name"],"</p>";
 
-?>
+
+
+
+
