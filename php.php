@@ -4,48 +4,67 @@
 </head>
 <body>
     <p id="c4_form_preview_name">
-        <?php
-        $dbh = new PDO('sqlite:test.db') or die("cannot open the database");
-        if($_POST["name"])
+    <?php
+        echo "<table style='border: solid 1px black;'>";
+        echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
+
+        class TableRows extends RecursiveIteratorIterator 
         {
-            // echo $_POST["name"];
-        
-            
-            //$query =  "SELECT * FROM accounts WHERE username=\"" . $_POST["name"] . "\";";
-            $query =  "SELECT * FROM accounts WHERE username LIKE '" . $_POST['name'] . "'";
-
-            $res = $dbh->query($query);
-
-            $numColumns = $res->fetchColumn();
-
-            //echo "Password: ", $pass, "\n";
-
-            if($numColumns == 1)
+            function __construct($it) 
             {
-                //echo("Got this far\n\n <br>");
-
-                foreach($dbh->query($query) as $res) 
-                {
-                    if(password_verify($_POST["password"],$res['password_hash']))
-                    {
-                        echo "Good login.";
-                    }
-                    else
-                    {
-                        echo "Incorrect password.";
-                    }
-                }
+                parent::__construct($it, self::LEAVES_ONLY);
             }
-            else
+
+            function current() 
             {
-                echo("Incorrect user name.");
+                return "<td style='width:150px;border:1px solid black;'>" . parent::current() . "</td>";
             }
-            
-            //var_dump($res);
 
-            $dbh = null;
+            function beginChildren()
+            {
+                echo "<tr>";
+            }
+
+            function endChildren() 
+            {
+                echo "</tr>" . "\n";
+            }
         }
-        ?>
+
+
+        $servername = "jaccounts.db";
+        $username = "jjpaq";
+        $password = "CAlgary403";
+
+        try 
+        {
+            $dbh = new PDO("mysql:host=$servername;dbname=accounts", $username, $password);
+            // set the PDO error mode to exception
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+
+            $stmt = $dbh->prepare("SELECT id, name, email FROM accounts");
+            $stmt->execute();
+
+            // set the resulting array to associative
+            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+            foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) 
+            {
+                echo $v;
+            }
+        }
+        catch(PDOException $e)
+        {
+            echo "Connection failed: " . $e->getMessage();
+        }
+
+        //$dbh = new PDO('sqlite:test.db') or die("cannot open the database");
+
+
+        $dbh = null;
+    
+    ?>
     </p>
 
 </body>
