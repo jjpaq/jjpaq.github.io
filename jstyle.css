@@ -100,7 +100,7 @@ div.frame
 {
     border:1px #666 solid;
     /*padding: 6px 12px;*/
-    /*overflow:hidden;*/
+    overflow:hidden;
 }
 
 p.highlight:hover
