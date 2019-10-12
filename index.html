@@ -17,6 +17,7 @@
 			<button class="tablinks" onclick="openTab(event, 'class1')">Class 1</button>
 			<button class="tablinks" onclick="openTab(event, 'class2')">Class 2</button>
 			<button class="tablinks" onclick="openTab(event, 'class3')">Class 3</button>
+			<button class="tablinks" onclick="openTab(event, 'class4')">Class 4</button>
 		</div>
 
 		<div id="class1" class="tabcontent">
@@ -97,7 +98,32 @@
 				<img class="fly" src="Images/fly.png" alt="an image of a fly">
 
 			</div>
-		</div>		
+		</div>	
+		
+		<div id="class4" class="tabcontent">
+			<div class="frame">
+				<h5>Playing around</h5>
+			</div>
+			<div style="overflow:hidden;" class="frame">
+				<form id="c4_name_form" action="https://jeremypaquette.com/php.php" method="POST" onsubmit="submitForm()" target="jpaquette_iframe">
+					Name: <input id="c4_form_input_name" type="text" name="name"><br>
+					Password: <input id="c4_form_input_password" type="password" name="password"><br><br>
+					<div class="centre">
+						<button style="margin:auto;" onclick="submitForm()">Submit!</button>
+					</div>
+				</form>
+				<div id="c4_form_preview">
+					<p id="c4_form_preview_title"></p>
+					<br>
+					<p id="c4_form_preview_name"></p>
+					<br>
+					<p id="c4_form_preview_email"></p>
+					<br>
+				</div>
+				<iframe name="jpaquette_iframe" id="form_response_frame" class="nb" src="https://jeremypaquette.com/php.php">Your browser does not support iframes.</iframe>
+			</div>
+			
+		</div>
 	</body>
 </html>
 <!-- test worked! -->

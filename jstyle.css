@@ -1,3 +1,52 @@
+#c4_name_form
+{
+    width:30%;
+    height:300px;
+    margin-top:6px;
+    float:left;
+}
+
+#c4_form_preview
+{
+    width:30%;
+    min-height:300px;
+    height:300px;
+    float:left;
+    text-align:center;
+    overflow: hidden;
+}
+
+#c4_form_preview_title
+{
+    /*border:1px solid black;*/
+    /*margin:auto;*/
+    background-color:lightgrey;
+}
+
+#c4_form_preview_name
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:red;
+}
+
+#c4_form_preview_email
+{
+    font-family: 'Times New Roman', Times, serif;
+    color:blue;
+}
+
+#c4_form_preview_email:hover
+{
+    text-decoration: underline;
+}
+
+#form_response_frame
+{
+    width:30%;
+    height:300px;
+    float:left;
+}
+
 .tab
 {
     overflow: hidden;
@@ -50,8 +99,8 @@ div.centre *
 div.frame
 {
     border:1px #666 solid;
-    padding: 6px 12px;
-    overflow:hidden;
+    /*padding: 6px 12px;*/
+    /*overflow:hidden;*/
 }
 
 p.highlight:hover
@@ -67,10 +116,10 @@ p.highlight:hover
     padding: 6px 12px;
 }
 
-p.article-content
+/*p.article-content
 {
-    /*width:600px;*/
-}
+    width:600px;
+}*/
 
 
 div.summary
@@ -89,4 +138,14 @@ img.fly
     bottom:200px;
     left:300px;
     width: 50px;
+}
+
+.nb
+{
+    border:none;
+}
+
+.np
+{
+    padding:none;
 }
