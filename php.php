@@ -62,7 +62,7 @@
             {
                 echo $v;
             }*/
-            echo 
+             
         }
         catch(PDOException $e)
         {
