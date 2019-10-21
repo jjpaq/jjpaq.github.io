@@ -12,7 +12,7 @@
             2 => array("file", "error-output.txt", "a")
          );
          
-         $process = proc_open('new.exe', $descriptorspec, $pipes);
+         $process = proc_open('/home/public/php/php_test.py', $descriptorspec, $pipes);
          
          $input = 20;
          $exp = 2;
