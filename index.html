@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="jstyle.css">
 		<script src="jscript.js"></script>
 	</head>
-	<body>
+	<body onload="captureTabs()">
 		<div class="tab">
 			<button class="tablinks" onclick="openTab(event, 'class1')">Class 1</button>
 			<button class="tablinks" onclick="openTab(event, 'class2')">Class 2</button>
@@ -130,10 +130,11 @@
 			Class 5
 			<div class="frame">
 				<div id="c5-python-editor">
-						<textarea id="c5-python-input" form="c5-python-editor"></textarea>
+						
 						<form id="c5-python-form" action="https://jeremypaquette.com/class5.php" method="POST" target="c5-python-results">
 							<input type="submit" value="Submit">
 						</form>
+						<textarea id="c5-python-input" form="c5-python-form" name="py-content"></textarea>
 						
 
 				</div>

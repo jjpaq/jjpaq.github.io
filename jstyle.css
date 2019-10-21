@@ -174,3 +174,12 @@ img.fly
     float:left;
     border: 1px solid blue;
 }
+
+#c5-python-form
+{
+    background-color:green;
+    display:block;
+    position:fixed;
+    left:0px;
+    top:500px;
+}
