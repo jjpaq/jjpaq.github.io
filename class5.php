@@ -19,7 +19,7 @@
          if (is_resource($process)) 
          {
              print fgets($pipes[1]);
-             fwrite($pipes[0], $input . "\n");
+             fwrite($pipes[0], $input . jkh"\n");
          
              print fgets($pipes[1]);
              fwrite($pipes[0], $exp . "\n");
