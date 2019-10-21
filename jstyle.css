@@ -149,3 +149,27 @@ img.fly
 {
     padding:none;
 }
+
+#c5-python-editor
+{
+    width:300px;
+    height:300px;
+    float:left;
+    border: 1px solid red;
+}
+
+#c5-python-input
+{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#c5-python-results
+{
+    width:300px;
+    height:300px;
+    float:left;
+    border: 1px solid blue;
+}
