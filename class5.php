@@ -9,32 +9,29 @@
         $descriptorspec = array(
             0 => array("pipe", "r"),
             1 => array("pipe", "w"),
-            2 => array("file", "error-output.txt", "a")
+            2 => array("file", "/home/public/php/error-output.txt", "a")
          );
          
-         $process = proc_open('/home/public/php/php_test.py', $descriptorspec, $pipes);
+         $process = proc_open('python3 /home/public/php/class5.py', $descriptorspec, $pipes);
          
          $input = 20;
          $exp = 2;
-         if (is_resource($process)) 
-         {
+         if (is_resource($process)) {
              print fgets($pipes[1]);
-             fwrite($pipes[0], $input . jkh"\n");
+             fwrite($pipes[0], $input . "\n");
          
              print fgets($pipes[1]);
              fwrite($pipes[0], $exp . "\n");
-         
-             print fgets($pipes[1]);
+            
+             echo fgets($pipes[1]);
          
              fclose($pipes[1]);
              fclose($pipes[0]);
              $return_value = proc_close($process);
          
              echo "command returned $return_value\n";
-         }
-         else 
-         {
-             echo "No resource available";
+         } else {
+             echo "No resource availeble";
          }
     ?>
 </body>
