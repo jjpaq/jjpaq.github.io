@@ -6,33 +6,15 @@
 <body>
     Content:<br>    
     <?php
-        $descriptorspec = array(
-            0 => array("pipe", "r"),
-            1 => array("pipe", "w"),
-            2 => array("file", "/home/public/php/error-output.txt", "a")
-         );
-         
-         $process = proc_open('python3 /home/public/php/class5.py', $descriptorspec, $pipes);
-         
-         $input = 20;
-         $exp = 2;
-         if (is_resource($process)) {
-             print fgets($pipes[1]);
-             fwrite($pipes[0], $input . "\n");
-         
-             print fgets($pipes[1]);
-             fwrite($pipes[0], $exp . "\n");
-            
-             echo fgets($pipes[1]);
-         
-             fclose($pipes[1]);
-             fclose($pipes[0]);
-             $return_value = proc_close($process);
-         
-             echo "command returned $return_value\n";
-         } else {
-             echo "No resource availeble";
-         }
+        echo $_POST["py-content"];
+
+        //$py_output = escapeshellcmd('/usr/local/bin/python3 print(\'it works!\')');
+
+        file_put_contents("/home/public/php/php_test.py",$_POST["py-content"]);
+        $py_command = escapeshellcmd('python3 /home/public/php/php_test.py');
+        $py_output = shell_exec($py_command);
+
+        echo $py_output;
     ?>
 </body>
 
