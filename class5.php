@@ -6,7 +6,7 @@
 <body>
     Content:<br>    
     <?php
-        echo $_POST["py-content"];
+        //echo $_POST["py-content"];
 
         //$py_output = escapeshellcmd('/usr/local/bin/python3 print(\'it works!\')');
 
