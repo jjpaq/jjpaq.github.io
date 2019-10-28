@@ -194,3 +194,29 @@ img.fly
     font-size: 20pt;
     font-weight: bold;
 }
+
+div.quiz-wrapper
+{
+    width: 100%;
+    height: 200px;
+
+    position:relative;
+    left:0;
+    top:0;
+
+    border: 1px solid black;
+}
+
+div.quiz-question
+{
+    width: 100%;
+    height: 100%;
+
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+
+
+
+
