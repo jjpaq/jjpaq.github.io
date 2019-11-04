@@ -4,7 +4,7 @@
 </head>
 <body>
     <p id="c4_form_preview_name">
-    <?php
+    <!--<?php
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
 
