@@ -4,7 +4,7 @@
 </head>
 <body>
     <p id="c4_form_preview_name">
-    <?php
+    <!--<?php
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
 
@@ -43,16 +43,26 @@
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Connected successfully";
 
-            $stmt = $dbh->prepare("SELECT id, name, email FROM accounts");
+            $stmt = $dbh->prepare("SELECT id, name, email FROM accounts WHERE uname LIKE \"" . $_POST["name"] . "\"");
             $stmt->execute();
-
+            
+            //
             // set the resulting array to associative
             $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
-            foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) 
+            $number_of_rows = $stmt->fetchColumn();
+
+            echo "<br>Number of rows: ", $number_of_rows, "<br>";
+
+            $return = $stmt->fetchAll();
+
+            var_dump($return);
+
+            /*foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) 
             {
                 echo $v;
-            }
+            }*/
+             
         }
         catch(PDOException $e)
         {

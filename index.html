@@ -6,19 +6,21 @@
 		</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=2" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="keywords" content="HTML" />
 
 		<link rel="stylesheet" type="text/css" href="jstyle.css">
 		<script src="jscript.js"></script>
 	</head>
-	<body>
+	<body onload="captureTabs()">
 		<div class="tab">
 			<button class="tablinks" onclick="openTab(event, 'class1')">Class 1</button>
 			<button class="tablinks" onclick="openTab(event, 'class2')">Class 2</button>
 			<button class="tablinks" onclick="openTab(event, 'class3')">Class 3</button>
 			<button class="tablinks" onclick="openTab(event, 'class4')">Class 4</button>
-			<button class="tablinks" onclick="openTab(event, 'assignment-1')">Assignment 1</button>
+			<button class="tablinks" onclick="openTab(event, 'class5')">Class 5</button>
+			<button class="tablinks" onclick="openTab(event, 'class6')">Class 6</button>
+			<button class="tablinks" onclick="openTab(event, 'class7')">Class 7</button>
 		</div>
 
 		<div id="class1" class="tabcontent">
@@ -126,9 +128,46 @@
 			
 		</div>
 
-		<div id="assignment-1" class="tabcontent">
+		<div id="class5" class="tabcontent">
+			Class 5
+			<div class="frame">
+				<div id="c5-python-editor">
+						
+						<form id="c5-python-form" action="https://jeremypaquette.com/class5.php" method="POST" target="c5-python-results">
+							<input type="submit" value="Submit">
+						</form>
+						<textarea id="c5-python-input" form="c5-python-form" name="py-content"></textarea>
+						
 
+				</div>
+				
+				
+				<iframe name="c5-python-results" id="c5-python-results">Your browser does not support iframes.</iframe>
+			</div>
+			<button id="cta-button">Find a place today!</button>
+		</div>
 
+		<div id="class6" class="tabcontent">
+			Class 6
+			<div class="frame">
+				Some content
+
+			</div>
+			<div class="quiz-wrapper">
+				<div class="quiz-question">
+					Question 1
+				</div>
+				<div class="quiz-question">
+					Question 2
+				</div>
+				<div class="quiz-question">
+					This is some more text <br> underneath the first.
+
+				</div>
+			</div>			
+		</div>
+		<div id="class7" class="tabcontent">
+			Class 7!
 		</div>
 	</body>
 </html>
